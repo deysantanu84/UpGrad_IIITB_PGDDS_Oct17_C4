@@ -1,0 +1,1769 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 10400.17.0915.2112                               -->
+<workbook original-version='10.4' source-build='10.4.0 (10400.17.0915.2112)' source-platform='win' version='10.4' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='D1' inline='true' name='federated.0evzdv71l8ujff1ap8k0e0wckvfw' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='D1' name='textscan.0h10nig1hd06qh13pbvr8047si0o'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='D1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <drill-paths>
+        <drill-path name='country_code, state_code, city' />
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.500768' measure-ordering='alphabetic' measure-percentage='0.499232' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='sector_wise_arranged_D1' inline='true' name='federated.0a9ng6n1aq7mxq18nqrch0c5xrwh' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sector_wise_arranged_D1' name='textscan.0kqcyva1wzyq7111sxyz80n8i6vu'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='sector_wise_arranged_D1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Main Sector' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+      <column caption='num of investments D1' datatype='integer' name='[num_of_investments_D1]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.500722' measure-ordering='alphabetic' measure-percentage='0.499278' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='sector_wise_arranged_D1 (2)' inline='true' name='federated.1agmhin0i316781b4hnf702slpq3' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sector_wise_arranged_D1' name='textscan.1rug88a0855ms51dd234v1xlsf35'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='sector_wise_arranged_D1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1rug88a0855ms51dd234v1xlsf35' name='sector_wise_arranged_D1.csv' table='[sector_wise_arranged_D1#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='main_sector' ordinal='1' />
+            <column datatype='integer' name='num_of_investments_D1' ordinal='2' />
+            <column datatype='integer' name='total_investments_D1' ordinal='3' />
+            <column datatype='integer' name='Rank' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>main_sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[main_sector]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>main_sector</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_of_investments_D1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_of_investments_D1]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>num_of_investments_D1</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_investments_D1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_investments_D1]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>total_investments_D1</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Main Sector' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+      <column caption='num of investments D1' datatype='integer' name='[num_of_investments_D1]' role='measure' type='quantitative' />
+      <column caption='total investments D1' datatype='integer' name='[total_investments_D1]' role='measure' type='quantitative' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.441176' measure-ordering='alphabetic' measure-percentage='0.558824' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='sector_wise_arranged_D1 (3)' inline='true' name='federated.1v8uilx0tew6fd1e9x2du0mdhm7r' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sector_wise_arranged_D1' name='textscan.0jqn9ho0eh9bna1ctvrzh1l5fgr1'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='sector_wise_arranged_D1.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0jqn9ho0eh9bna1ctvrzh1l5fgr1' name='sector_wise_arranged_D1.csv' table='[sector_wise_arranged_D1#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='main_sector' ordinal='1' />
+            <column datatype='integer' name='num_of_investments_D1' ordinal='2' />
+            <column datatype='integer' name='total_investments_D1' ordinal='3' />
+            <column datatype='integer' name='Rank' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>main_sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[main_sector]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>main_sector</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_of_investments_D1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_of_investments_D1]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>num_of_investments_D1</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_investments_D1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_investments_D1]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>total_investments_D1</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sector_wise_arranged_D1.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Main Sectors (USA)' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+      <column caption='num of investments D1' datatype='integer' name='[num_of_investments_D1]' role='measure' type='quantitative' />
+      <column caption='total investments D1' datatype='integer' name='[total_investments_D1]' role='measure' type='quantitative' />
+      <column-instance column='[main_sector]' derivation='None' name='[none:main_sector:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.436252' measure-ordering='alphabetic' measure-percentage='0.563748' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:main_sector:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Others&quot;</bucket>
+            </map>
+            <map to='#b4b7b7'>
+              <bucket>&quot;Automotive...Sports&quot;</bucket>
+            </map>
+            <map to='#bcbfbe'>
+              <bucket>&quot;Entertainment&quot;</bucket>
+            </map>
+            <map to='#c5c7c6'>
+              <bucket>&quot;Manufacturing&quot;</bucket>
+            </map>
+            <map to='#cdcecd'>
+              <bucket>&quot;Health&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;News..Search.and.Messaging&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cleantech...Semiconductors&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Social..Finance..Analytics..Advertising&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='top009' inline='true' name='federated.134uusu1y6otgk161k4t01roektp' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='top009' name='textscan.0v0pfp11g1fwqd105m9bd18g71s9'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='top009.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0v0pfp11g1fwqd105m9bd18g71s9' name='top009.csv' table='[top009#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='country_code' ordinal='1' />
+            <column datatype='integer' name='total_funding' ordinal='2' />
+            <column datatype='boolean' name='isEngSpeaking' ordinal='3' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[top009.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country_code</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country_code]</local-name>
+            <parent-name>[top009.csv]</parent-name>
+            <remote-alias>country_code</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_funding</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_funding]</local-name>
+            <parent-name>[top009.csv]</parent-name>
+            <remote-alias>total_funding</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>isEngSpeaking</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[isEngSpeaking]</local-name>
+            <parent-name>[top009.csv]</parent-name>
+            <remote-alias>isEngSpeaking</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>1</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;bool&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[top009.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Country' datatype='string' name='[country_code]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <aliases>
+          <alias key='&quot;CAN&quot;' value='Canada' />
+          <alias key='&quot;CHN&quot;' value='China' />
+          <alias key='&quot;DEU&quot;' value='Germany' />
+          <alias key='&quot;FRA&quot;' value='France' />
+          <alias key='&quot;GBR&quot;' value='Great Britain' />
+          <alias key='&quot;IND&quot;' value='India' />
+          <alias key='&quot;ISR&quot;' value='Israel' />
+          <alias key='&quot;JPN&quot;' value='Japan' />
+        </aliases>
+      </column>
+      <column caption='Is Eng Speaking' datatype='boolean' name='[isEngSpeaking]' role='dimension' type='nominal'>
+        <aliases>
+          <alias key='false' value='No' />
+          <alias key='true' value='Yes' />
+        </aliases>
+      </column>
+      <column caption='Total Funding' datatype='integer' name='[total_funding]' role='measure' type='quantitative' />
+      <column-instance column='[isEngSpeaking]' derivation='None' name='[none:isEngSpeaking:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.451613' measure-ordering='alphabetic' measure-percentage='0.548387' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:isEngSpeaking:nk]' type='palette'>
+            <map to='#59a14f'>
+              <bucket>true</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>false</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='sector_wise_arranged_D2' inline='true' name='federated.1y3imam17qisuj16rmxyo1odz9l2' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sector_wise_arranged_D2' name='textscan.0idqayo0e8y3b71683pg40n4em25'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='sector_wise_arranged_D2.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0idqayo0e8y3b71683pg40n4em25' name='sector_wise_arranged_D2.csv' table='[sector_wise_arranged_D2#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='main_sector' ordinal='1' />
+            <column datatype='integer' name='num_of_investments_D2' ordinal='2' />
+            <column datatype='integer' name='total_investments_D2' ordinal='3' />
+            <column datatype='integer' name='Rank' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[sector_wise_arranged_D2.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>main_sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[main_sector]</local-name>
+            <parent-name>[sector_wise_arranged_D2.csv]</parent-name>
+            <remote-alias>main_sector</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_of_investments_D2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_of_investments_D2]</local-name>
+            <parent-name>[sector_wise_arranged_D2.csv]</parent-name>
+            <remote-alias>num_of_investments_D2</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_investments_D2</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_investments_D2]</local-name>
+            <parent-name>[sector_wise_arranged_D2.csv]</parent-name>
+            <remote-alias>total_investments_D2</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[sector_wise_arranged_D2.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sector_wise_arranged_D2.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Main Sectors (Great Britain)' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+      <column caption='num of investments D2' datatype='integer' name='[num_of_investments_D2]' role='measure' type='quantitative' />
+      <column caption='total investments D2' datatype='integer' name='[total_investments_D2]' role='measure' type='quantitative' />
+      <column-instance column='[main_sector]' derivation='None' name='[none:main_sector:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.436252' measure-ordering='alphabetic' measure-percentage='0.563748' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:main_sector:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Others&quot;</bucket>
+            </map>
+            <map to='#b4b7b7'>
+              <bucket>&quot;Automotive...Sports&quot;</bucket>
+            </map>
+            <map to='#bcbfbe'>
+              <bucket>&quot;Health&quot;</bucket>
+            </map>
+            <map to='#c5c7c6'>
+              <bucket>&quot;Manufacturing&quot;</bucket>
+            </map>
+            <map to='#cdcecd'>
+              <bucket>&quot;Entertainment&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;News..Search.and.Messaging&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Cleantech...Semiconductors&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Social..Finance..Analytics..Advertising&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+    <datasource caption='sector_wise_arranged_D3' inline='true' name='federated.0h4494k0ywfy5319e0kcy0mgt5l7' version='10.4'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='sector_wise_arranged_D3' name='textscan.00u2ol21nxjabh18x0pmu17r7jpl'>
+            <connection class='textscan' directory='D:/myFiles/upgrad/GroupProject1' filename='sector_wise_arranged_D3.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.00u2ol21nxjabh18x0pmu17r7jpl' name='sector_wise_arranged_D3.csv' table='[sector_wise_arranged_D3#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='F1' ordinal='0' />
+            <column datatype='string' name='main_sector' ordinal='1' />
+            <column datatype='integer' name='num_of_investments_D3' ordinal='2' />
+            <column datatype='integer' name='total_investments_D3' ordinal='3' />
+            <column datatype='integer' name='Rank' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[sector_wise_arranged_D3.csv]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>main_sector</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[main_sector]</local-name>
+            <parent-name>[sector_wise_arranged_D3.csv]</parent-name>
+            <remote-alias>main_sector</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteCollation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='DebugRemoteMetadata (compression)'>&quot;heap&quot;</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>4294967292</attribute>
+              <attribute datatype='integer' name='DebugRemoteMetadata (storagewidth)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;str&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>num_of_investments_D3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[num_of_investments_D3]</local-name>
+            <parent-name>[sector_wise_arranged_D3.csv]</parent-name>
+            <remote-alias>num_of_investments_D3</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>total_investments_D3</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[total_investments_D3]</local-name>
+            <parent-name>[sector_wise_arranged_D3.csv]</parent-name>
+            <remote-alias>total_investments_D3</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rank</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rank]</local-name>
+            <parent-name>[sector_wise_arranged_D3.csv]</parent-name>
+            <remote-alias>Rank</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='DebugRemoteMetadata (size)'>8</attribute>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;sint64&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[sector_wise_arranged_D3.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;Rs&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Main Sectors (India)' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+      <column caption='num of investments D3' datatype='integer' name='[num_of_investments_D3]' role='measure' type='quantitative' />
+      <column caption='total investments D3' datatype='integer' name='[total_investments_D3]' role='measure' type='quantitative' />
+      <column-instance column='[main_sector]' derivation='None' name='[none:main_sector:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.436252' measure-ordering='alphabetic' measure-percentage='0.563748' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:main_sector:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Others&quot;</bucket>
+            </map>
+            <map to='#b4b7b7'>
+              <bucket>&quot;Automotive...Sports&quot;</bucket>
+            </map>
+            <map to='#bcbfbe'>
+              <bucket>&quot;Health&quot;</bucket>
+            </map>
+            <map to='#c5c7c6'>
+              <bucket>&quot;Cleantech...Semiconductors&quot;</bucket>
+            </map>
+            <map to='#cdcecd'>
+              <bucket>&quot;Manufacturing&quot;</bucket>
+            </map>
+            <map to='#d5d5d5'>
+              <bucket>&quot;Entertainment&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;News..Search.and.Messaging&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Social..Finance..Analytics..Advertising&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='GBR'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='24' underline='true'>Great Britain</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='sector_wise_arranged_D2' name='federated.1y3imam17qisuj16rmxyo1odz9l2' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1y3imam17qisuj16rmxyo1odz9l2'>
+            <column caption='Main Sectors (Great Britain)' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+            <column-instance column='[main_sector]' derivation='None' name='[none:main_sector:nk]' pivot='key' type='nominal' />
+            <column caption='num of investments D2' datatype='integer' name='[num_of_investments_D2]' role='measure' type='quantitative' />
+            <column-instance column='[num_of_investments_D2]' derivation='Sum' name='[sum:num_of_investments_D2:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]' direction='DESC' using='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' scope='rows' value='No. of Investments' />
+            <format attr='subtitle' class='0' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' value='12' />
+            <format attr='font-weight' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' value='bold' />
+            <format attr='border-width' value='3' />
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]' value='false' />
+            <format attr='font-weight' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' value='bold' />
+            <format attr='font-size' field='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' value='10' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='5' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='3' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='12' />
+            <format attr='color' value='#79706e' />
+            <format attr='text-decoration' value='underline' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]' />
+              <text column='[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1y3imam17qisuj16rmxyo1odz9l2].[sum:num_of_investments_D2:qk]</rows>
+        <cols>[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='IND'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='24' underline='true'>India</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='sector_wise_arranged_D3' name='federated.0h4494k0ywfy5319e0kcy0mgt5l7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0h4494k0ywfy5319e0kcy0mgt5l7'>
+            <column caption='Main Sectors (India)' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+            <column-instance column='[main_sector]' derivation='None' name='[none:main_sector:nk]' pivot='key' type='nominal' />
+            <column caption='num of investments D3' datatype='integer' name='[num_of_investments_D3]' role='measure' type='quantitative' />
+            <column-instance column='[num_of_investments_D3]' derivation='Sum' name='[sum:num_of_investments_D3:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]' direction='DESC' using='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' scope='rows' value='No. of Investments' />
+            <format attr='subtitle' class='0' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-size' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' value='12' />
+            <format attr='font-weight' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]' value='false' />
+            <format attr='font-size' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' value='10' />
+            <format attr='font-weight' field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' value='bold' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='5' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='3' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='12' />
+            <format attr='text-decoration' value='underline' />
+            <format attr='color' value='#79706e' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]' />
+              <text column='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[sum:num_of_investments_D3:qk]</rows>
+        <cols>[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]</cols>
+      </table>
+    </worksheet>
+    <worksheet name='USA'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontsize='24' underline='true'>USA</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='sector_wise_arranged_D1 (3)' name='federated.1v8uilx0tew6fd1e9x2du0mdhm7r' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1v8uilx0tew6fd1e9x2du0mdhm7r'>
+            <column caption='Main Sectors (USA)' datatype='string' name='[main_sector]' role='dimension' type='nominal' />
+            <column-instance column='[main_sector]' derivation='None' name='[none:main_sector:nk]' pivot='key' type='nominal' />
+            <column caption='num of investments D1' datatype='integer' name='[num_of_investments_D1]' role='measure' type='quantitative' />
+            <column-instance column='[num_of_investments_D1]' derivation='Sum' name='[sum:num_of_investments_D1:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <sort class='computed' column='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]' direction='DESC' using='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' scope='rows' value='No. of Investments' />
+            <format attr='subtitle' class='0' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' scope='rows' value='' />
+            <format attr='auto-subtitle' class='0' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' scope='rows' value='true' />
+            <format attr='display' class='0' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='font-weight' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' value='bold' />
+            <format attr='font-size' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' value='12' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='border-style' value='none' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]' value='false' />
+            <format attr='font-weight' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' value='bold' />
+            <format attr='font-size' field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' value='10' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='5' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#faf4e7' />
+          </style-rule>
+          <style-rule element='legend'>
+            <format attr='border-style' value='solid' />
+            <format attr='border-width' value='3' />
+          </style-rule>
+          <style-rule element='legend-title'>
+            <format attr='font-size' value='12' />
+            <format attr='text-decoration' value='underline' />
+            <format attr='color' value='#79706e' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]' />
+              <text column='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[sum:num_of_investments_D1:qk]</rows>
+        <cols>[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]</cols>
+      </table>
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard name='Dashboard 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontname='Merriweather,serif' fontsize='16'>Number of Investments in the Top 3 sectors of the Top 3 countries for the Venture Investment Type</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <style>
+        <style-rule element='table'>
+          <format attr='background-color' value='#faf4e7' />
+        </style-rule>
+      </style>
+      <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
+      <zones use-insets='false'>
+        <zone h='100000' id='2' type='layout-basic' w='100000' x='0' y='0'>
+          <zone h='98000' id='12' param='vert' type='layout-flow' w='98400' x='800' y='1000'>
+            <zone h='8875' id='11' type='title' w='98400' x='800' y='1000'>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='89125' id='5' param='horz' type='layout-flow' w='98400' x='800' y='9875'>
+              <zone h='89125' id='3' type='layout-basic' w='65800' x='800' y='9875'>
+                <zone h='44563' id='1' name='GBR' w='32900' x='800' y='9875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='89125' id='7' name='USA' w='32900' x='33700' y='9875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='44562' id='9' name='IND' w='32900' x='800' y='54438'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone fixed-size='326' h='89125' id='4' is-fixed='true' param='vert' type='layout-flow' w='32600' x='66600' y='9875'>
+                <zone fixed-size='250' h='29708' id='6' is-fixed='true' name='GBR' pane-specification-id='0' param='[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]' type='color' w='32600' x='66600' y='9875'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='319' h='29708' id='8' is-fixed='true' name='USA' pane-specification-id='0' param='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]' type='color' w='32600' x='66600' y='39583'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='348' h='29709' id='10' is-fixed='true' name='IND' pane-specification-id='0' param='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]' type='color' w='32600' x='66600' y='69291'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+      </zones>
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' source-height='156'>
+    <window class='worksheet' name='USA'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+          <strip size='160'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]</field>
+            <field>[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='GBR'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1y3imam17qisuj16rmxyo1odz9l2].[none:main_sector:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='worksheet' name='IND'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='GBR'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='IND'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0h4494k0ywfy5319e0kcy0mgt5l7].[none:main_sector:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+        <viewpoint name='USA'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.1v8uilx0tew6fd1e9x2du0mdhm7r].[none:main_sector:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='-1' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      sR5EdKx4ugAAAABJRU5ErkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='GBR' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='IND' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAAHm0lEQVR4nO3df5DUdR3H8df3u3u/9u5EDpGwIIPSEtOZaBxSSSfUNL2CIZv+SGeMtMyG
+      fpARJP1hMxg5ofTTtPDnTFk4oDARjBdjjgYzhhAhIhbDyOEhHcIdcHC7+/30B3h6wM3NdF/Z
+      793r+fiL3Vk+951hn/v57Bz73iiEEAQYiqIoyktSSIpKysVKXw9wyuUlKSl3K+nurPS1AKdc
+      /M4bydEeABtx75tRZa4CqJBeL/mJYiWBXQA+ej3bYyWKo1KlrgU45eL+HwIMXQQAawQAawQA
+      awQAawQAawQAawQAawQAawQAawQAawQAawQAawQAa/0GEMpFvbxxnX60cLEOF8uSpO5DHVrb
+      skKLHl3V87gdm9dpzuwfaOHiJ3WgO3n3rhhIUb8BbFn7F/38gSf0hxUtKpaODpBY/tj9WrZi
+      lf7Ysl6SVNz/mmbe/hNNvOIadax/UouW/F2MmsBg0G8A513SrF8uuF3vO72m577pt3xX82de
+      33P7tVc2qu6cy/T5Ky/VzG/dqLWrnhEzJjAYpPIeoFg8rJrquqMLFuoUdx0WhyAMBqkEMOqs
+      cWp95R/ac+CINq55Tk3nf1g1/f81oOL6/QT88t8u0PyHntaOnW264qqpmvXje7X5sTu0+sVd
+      2r7nkC6dskkPLn1YX5nyXjVf3az6Mz+ge382g/kSGBSiEEIoFw8q6e5UoirFnN5horphdMTv
+      AWCNAGCtz8FYv1u5Rf/c3j7gH3DXlyepUMuwLWRTn4Ox9h88ot37Dg/4B0QqKs87YmQURyBY
+      IwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBYIwBY
+      IwBYIwBYIwBY63MuUEhpumc55FUKzAVCNvU5FyhK6SsuclFJ+YjBQMgmjkCwRgCwRgCwRgCw
+      RgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCwRgCw
+      1mssSpAUwtt/TkMIUc+aQNYcF0CsRLljt9KZ5dN7TSBbTjIYqywpvcFYcVRWLuKkhWzimQlr
+      BABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABrBABr
+      BABrBABrBABrvcaiJIqVhKN3hZTmApVDXqWQ7/+BQAWcZC5QSVJ6c4FyUUn5KJ2YgLRxBII1
+      AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1AoA1
+      AoA1AoA1AoC1E+YChZCTlN5coCTkVD62JpA1vQKIlChW+ditdOYC9V4TyJbjApDemmGV1iir
+      KApiLhayivcAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsEYAsJadL/ANQTu3
+      bdCyVet02lnjNP2zV6m63KmVTz2ltu4GTZ96jUY0VFf6KjHEZGYHaNv6vGZ8827VjBip7jd3
+      au8h6eG779DSF9rU+e+1+uq8+5SEdD6jALwlIztAUMuyJ3TuJZerc3ebPjRxskY3dqjluVbd
+      +fhCja/6r/46dZbak6CROT5cgPRkZAdI9PquN9S+r0Njx47WQ/PnaNkLL6urq0GnNeYU19Zq
+      eKmkDnYApCwjO0CsD55ztvbkL9C0aVPUsflZte6Wzmjaq23/2adC4XW11jXoPXy0DCnLSACR
+      rvzCTVp621x9bvWDKsbD9auvX6BJ0XR9/9ablI8TXX3jt1WIM7JhYcjISABS/Znj9cAji/Vm
+      x0EVGoepsVCjcdfeoKUXX6diyKlp+DA+W4zUZSYASaquq9eouvqe21EU6/SmERW8Igx1nClg
+      7YTBWEk4eldag7HKIa9SOG6jCUHJylkDX7xpvOJJtw18Hdjq9cyMlSiOSpKkKKXBWLmopPxx
+      h/egRKXW9QNeO0pKyh+7XuD/wREI1ggA1ggA1ggA1ggA1ggA1ggA1ggA1jL1f4HeTbu2rtey
+      NRskSU1nT9AXP32R2ltf1fLVz6tq+BhNve5y1VfxeuDG5l98zdLfa8Oug2psbFB9XbXCvh36
+      zrx7dCDktWnVI5r9i+Up/e4bg4nNDvDq9p3KjRylYq6gSR/7iFSX069/s0h1+Vhrcjv1+Bt8
+      j5kjmx2g+YYZ+uRHx2nPS8/o+q/NVzlfpbhrrxbMm61HN0W689bm1L4XDYOHzQ4wbsLHdeHF
+      w1T61Pn685cWqKvUqbu+N1djPnOz7rv2ItXkbV4L8A42Afx07je0ZX+tuva3a/K0m9W19UUt
+      efZfmnhosf62ZLEmTG7WnFuaxTcae7EJ4If33K+2Pe1SvlajR52hUOzS0yv/pPKxd751DcN8
+      zoPoYRNAVW1BY8YU3r6jpqCx7x9buQtCJvCiB2tDcgfo3rZdB1a2DHidwmWfUO2FE1K4ImTV
+      kAygvL9DRza+NOB1as47N4WrQZZxBII1AoA1AoC1Cs0FSlJZW4pPXFtSEtLpOuljfQwdlZsL
+      lMrqyUnnAhWjdAKL+1gfQwdHIFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgjAFgj
+      AFgjAFj7H+tZ10dNfysmAAAAAElFTkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='USA' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAANz0lEQVR4nO3de1hUdR7H8c+ZCwwil0ExLil4ywsKXdYb3iofenKLNsM2U7fWSttlN8PW
+      W7WumtlmeK3UHnBzs81Wbdu2zayVLFPzuuoKKqYgKqCCchEEBmbO2T9QFAbdiMMMO9/P679g
+      /HFOzpszM853foqmaRqIBFIURTEBgKbWQHVUu/t4iFzOBACqoxpqdZm7j4XI5UzX/8fp/BKc
+      yc1117EQuVy9AFRNw+D+fdx1LEQuZ3D3ARC5EwMg0RgAicYASDQGQKIxABKNAZBoDIBEYwAk
+      GgMg0RgAicYASDQGQKIxABLN1NgXKy9dxOFjOTD5WhHVszPMBqXue7bLxUg/ko22weHoGRlS
+      9/WL+adwoqACd/TpAZO9AvvTM1Hj0GAwe6NvdDTamFv+ZIiayikA7VIunp00Ez4hnVCYdQSD
+      xk/H1MdioQCoLivA5F89DyU4AjlHMvDMK8sxemAEVFspZr0wDV/n25H26ToYc3YicfpKDOkX
+      BW+/IHTqwQCodXK+AnhZsTg1Fe39fHDgkxVYcugUgFgAwLnsvSgNGoS1Syaj+NBGPLbsQ4wa
+      MANb1q9G8N3jEP3VXwEAZ05no0vfWIx6+G70jIpCcFtXnhLRD+f0HECx+MJqUfDPNW/jlY+O
+      YfpTP8XVB0BBod1RnpmGuW+8iRUbtqDkTD6KinPwwdZ8JP58eN0agWHd0dmvAh+vW4OEcZOR
+      U2Rz1fkQNYmiaZrmqLkMtboMOXkluDXEDyvnTEeWf3/Mfm4M/LyN9f5AcX42vt17FIbSE0jZ
+      UY2EW7Pw5uY89O5oxa49+3D/hBlYOn0cTKbai8vcX4/Fnc8sQPxdHd1xfkQ31MYvWGnwEEjD
+      pew9SN30H4we3RHvvLkEkX1j8bPYTli/cS/GxcfiT39+Hw6DCTu27MRvkpdjSEcz4p60Qa2u
+      wOQpMzHpsThs/NPrSMuqQaiPDdvzvTGxW3uYFLt7zpLoJhpcAYoR3MaGb3ceRI1ae4Pgjt2h
+      ZW3GpoJIzJ0UhxOHD+LY6SJ06xODXhEd6hbSHHbs238QfW6/E16owr9370NBuR13DRyE0EAf
+      N50e0Y15tQ1VnAKIDLc63XDPt9vQc1As/M3GRpYh+v/k1Ta04UOgxvUfNrSlj4XILW4YwNb0
+      c8i9UNHsHzB6SAS8eeWgVuqGAezOvIA9319o9g94aGBHBkCtFt8LRKIxABKNAZBoDIBEYwAk
+      GgMg0RgAicYASDQGQKIxABKNAZBoDIBEc3oznEOrfeOaBsXpxj+Gqhnr1gSAiuI8vJe6Ctv+
+      cxI9+sdhxnPjYLmS4cF/fYg/rt5Ud9uHJ87AmGFdsHPLJnzwzUm89eoLMFz5iJays+lImpqM
+      +N/OwcODuuhyrCSPUwAGXBkFg6bLD1CgXrcmUHA8HejUD8ljxmHBjCRsGnwPEn5S+/lCvYeM
+      xLK+Q6HVVODlpKkIvbUDDu/4Amm7jmL7vkwAKgxQoKlVWJG8HAYvB47nF9dbn6gpnAJQlNo7
+      vj6//2vXu7omAHQdEIff9tdw9sQBnKu0oFuYf933fXz9EO7rh+xdn+JyWCyGdrPCq8dDiLnz
+      Lny9fzYUqFAUBUe3/QO57Qfhoc5HcAz11ydqCpc/B9DUGqRtWIXE2e8i6bWFiAlvMC+s2pCS
+      sh4TJo6Hl9E5Q9VWguSVnyFhZD8UFpeh5GIBKqt5BaAf5weNROrpxK7PsDLtPP68ehkCvJ0H
+      ZU7vT8Nxc1+8EhPa6J+vPHcSNi8LVi1ZhPwT6Sj3L8XjDw5DdMOQiH4AlweQmX4E2Ye2YmTc
+      DsBgxJT5b8F04D1kBI7ArLGDsHHjNjydOBleV375/235PCxatx3lFVUYds8ozFj8Jta+nwIA
+      SHt/EbKDR/LOTz/aDT8V4o0NGbqMRK5+YTD8fG78waBqZSFmzknFi3Nnwmrhq7LkOj/4UyFa
+      kmJph/nzp8Ns4p2fXM/9ASgG3vnJbdwSgKapsK26v9nrGEJj4PVgsg5HRFK57wqgNf+lS01z
+      6HAgJBkfe5BoDIBEYwAkGgMg0RgAicYASDQGQKIxABKNAZBoDf4lWIFdq/2SXjPBDs1Ut2Yd
+      Hf4VuJbBeW2iJnDaJvXqdqaKTjPBRsUOk1I/Jg0q9Nk0VeX2q9QsfAhEojEAEo0BkGgMgERj
+      ACQaAyDRGACJxgBINAZAojEAEo0BkGgMgERjACSax72XWFMdKC0pgc0OBFgDYTFf+wh2R40N
+      RSWXoGoKAq1WeJuNqLpchpLySgCAl48vgvx9Ya+uQlFJGSy+fvDztei2WQi1Ph4XwCepyUj5
+      /BAMjioE9B6BNa8nwnRlX7GP3knG2q3HoFZXwieiP1Yt+h0+WvgiUnYUIjTAG33uHY15E0fg
+      1RcmY+fpCjgMbbD47cWIvjXAzWdFLcXjAoi5NwEfPfk7GMvO4L4J82CzqzB51V4F4p+agkcS
+      fVBx8TTGT3wJl8orcTynHDNenY2BkSHo0N6K/AOfY191d3z68TRsX7sIqzZsxbIpD/Eq4KE8
+      LoAu3bvjYu73mDd3Ae5LGAMf87WnORbLJTz9yNPIOHceT76YjLAAM8K6hOKvSxdhxYUCDHns
+      OdwflIOuPXvD22REt5goFKRmufFsqKU5BaBqtb/r9Np2TtOUujWvfVG3Lfic1j5z6GskvbYW
+      idN/j3vuqN0+Vb16MoZbsOjdlcjLysAfXl+BuMHLkfjya/iNYkBl3n7c/+xqPDBlAIouFkHV
+      FJQVXoR3YCA0Ta/5OGptnALQaxb4+vWc19Tvxaf6a2tYtmAhImMewYWsdGw4fQrx8cORuWsb
+      2veKxscrUuHfuRvMNaUoLClHTeVlzJo2C51vj8W5jK0I7xONqJ8Mw4U/JmLpKgu++8ffkDBz
+      ie7/T6j1cArAqNQOrOv1V25Q1Lo1r9J029dXa7B2DYY/8ChyiqpQcP4s4G1DVdFJLFq+Dkve
+      HYxHRo/Al9/sh81owao176BHuBWJz/4CG7fsRcd+DyDpwXvhYzFhzepk/P3z7Zg0awFG9Ovs
+      dPzkOdyyR5imqbCl3tfstZXQaHjHL77pbfIz/43vq9ph+O2R/D1O9bSKPcJaWljPuxDm7oOg
+      VssjA7AXXkT10ePNXsfcNRLm8BAdjohaK48MoOZULkrfW9/sdfwfH8UAPBzfC0SiMQASjQGQ
+      aAyARGMAJBoDINEYAInGAEg0BkCiMQASjQGQaAyARGMAJJpHbpOqavp0rXIbVo/nkduk1ug0
+      wmjgNqwejw+BSDQGQKIxABKNAZBoDIBEYwAkGgMg0RgAicYASDQGQKIxABKNAZBoDIBEYwAk
+      GgMg0RgAicYASDSORN4ERyI9n9NIpLFuWFG/kUhjw5gUvUYirz/eaww6jkQ2tj55Dqdfb1fH
+      d/XcUVFpuE+2brtOa05r662l1yf34nMAEo0BkGgMgERjACQaAyDRGACJxgBINAZAojEAEo0B
+      kGgMgERjACQaAyDRGACJxgBINAZAojkNxOg3rNKya7pibVesT+7lNBPsgP4zwQ6nyUv9ZoKd
+      1oa+M8GNrU+eg9uk3gS3SfV8fA5AojEAEo0BkGgMgERjACQaAyDRGACJxgBINAZAojEAEo1v
+      dGkiTdNw6uhBXLKEI7pLh3rfy87Yhz1HzgAAwm+LxtDbuyL3RAZ2HcxCaLcoDIzpBvvlYmzf
+      vgsXyh24Y1AsbgsPcsdp0BW8AjTJZSx9eSqenJSEdd9kNvieAx++vRTfHcvD+YJClJZXovj4
+      NiQ8PQfZuflYPnsqUr44hN3/+gSb92Yi7+RRPDV2AtLPVbrlTKgWrwBN4o3HJ7+EmB4p+MrR
+      4Fv2CpzIu4xe/YLQtXN33BcbBfvZDESEByPQGoB2HTrgFqsfho2cgKGjNJw9eRi7dx2EkRsQ
+      uBWvAE1iQkhIuxu8UdyMRyeMgZ+9Eps/WIpn5vwFmpcFFsWO0tIyVNQoaOtjBlCC5x8fiwd+
+      nogud49G5yBv154C1cMrgE5Ugxfi4hNgNptQEx+NexLXY3daAQL7j8K0yT/FwS/fxVsff4O4
+      6HFY9uFaVJYVY/60Kfhs/514dECEuw9fLAbQBNVFeZj3xls4dGAf8tQMGEvPIOmJ4UhdsxmT
+      fjES059PguofhnM5x5Hw1MsYMDQAC8dPxS+PbMaZ7JN4fv5CpMx/CdtyKuBrUpGVD4ztFOzu
+      0xKNATSBqW0Qxj7xBEaPHQ8A8PINwOEt/4SjXW8EtLsFS5e/jZO552H2taJ7ZCgMioJ161cj
+      J68QAcGh6HiLFbaomRh+Kh/VDiAsIgLt/du4+axkcwrg6jihXqOwqmZwHlHUbc5WaXT8UdP0
+      eWKpNVzf7IsevfrUu41aNgxJ0X0BAD4BHdA74NpLo6oG+FpDEGUNubIe4NXGitt6Wevdhtyn
+      kSuAvn8jSgusWV9L34Nuvn6vmD4uOAZqKU4BGJTav0y9XpxTFLVuzas06DUUrzmtXfsz9blD
+      KjdYv+RSFSptzZ8V7hDUBkYjX4hzJz4H+BEqbXaUV1Q3e51gKx//uxt//ZBoDIBEYwAkGgMg
+      0RgAicYASDQGQKIxABKNAZBoDIBEYwAkGgMg0RgAicYASDQGQKK5ZSRSr5FFl49EXvdz9aCi
+      kXFRcikXjERqTmvqtQNlLXeMROo3ccZxSvdywUik81jh//tIpF5aen3633j9JdEYAInGAEg0
+      BkCiMQASjQGQaAyARGMAJBoDINEYAInGAEi0/wKh+Yw1ml41CgAAAABJRU5ErkJggg==
+    </thumbnail>
+  </thumbnails>
+</workbook>
