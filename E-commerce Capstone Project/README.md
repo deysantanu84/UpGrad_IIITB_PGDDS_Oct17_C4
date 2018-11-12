@@ -13,8 +13,9 @@
     3. Home Audio
 
 ## Data Understanding
-- Dataset: https://drive.google.com/file/d/1Dq6Qr-gICou6UABl-ipdyQ6s-TS4bVSI/view?usp=sharing
-- Data available is for the period July 2015 to June 2016 and consists of:
+Dataset: https://drive.google.com/file/d/1Dq6Qr-gICou6UABl-ipdyQ6s-TS4bVSI/view?usp=sharing
+
+Data available is for the period July 2015 to June 2016 and consists of:
 - Order Level data for the above period (ConsumerElectronics.csv)
 - Monthly advertising spends (Ad Stocks) on different marketing channels (Final_adstock.csv)
 - Monthly NPS (or brand perception) data (nps.csv)
